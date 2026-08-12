@@ -1,0 +1,19 @@
+name: Build Mod
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Geode CLI
+        uses: geode-sdk/install-geode-cli@main
+
+      - uses: geode-sdk/build-geode-mod@main
+        with:
+          combine: true
+          
