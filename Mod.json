@@ -1,0 +1,14 @@
+{
+  "geode": "3.0.0",
+  "gd": {
+    "win": "2.2081",
+    "android": "2.2081",
+    "mac": "2.2081",
+    "ios": "2.2081"
+  },
+  "id": "zdylanx1577.prueba_shitty",
+  "name": "Prueba Shitty",
+  "version": "1.0.0",
+  "developer": "zDylanx1577",
+  "description": "Un mod con noclip, contador de muertes y startpos."
+}
