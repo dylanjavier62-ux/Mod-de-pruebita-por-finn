@@ -1,0 +1,21 @@
+name: Build Mod
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Geode CLI
+        run: |
+          wget -q https://github.com/geode-sdk/cli/releases/latest/download/geode-cli-linux.tar.gz
+          tar -xzf geode-cli-linux.tar.gz
+          sudo mv geode /usr/local/bin/
+
+      - name: Build Mod
+        run: geode build
+        
